@@ -18,12 +18,6 @@ export const Form: FC<FormProps> = ({ onSubmit }) => {
     formState: { errors, isValid, isSubmitted },
   } = useForm<CalcInput>({
     mode: "onChange",
-    defaultValues: {
-      amount: 250000,
-      interestRate: 2,
-      repaymentRate: 3,
-      period: 30,
-    },
     resolver: yupResolver(validationSchema),
   });
 

@@ -27,12 +27,7 @@ export const App = () => {
   return (
     <>
       <CssBaseline />
-      <Box
-        justifyContent="center"
-        alignItems="center"
-        m={3}
-        sx={{ maxWidth: 1500 }}
-      >
+      <Box m={3} sx={{ maxWidth: 1500 }}>
         <Box display="flex">
           <Typography variant="h4" fontWeight={700} mb={3}>
             Tilgungsrechner

@@ -1,0 +1,16 @@
+{
+  "name": "scomcd",
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "concurrently  -k \"yarn workspace server run start\" \"yarn workspace client run start\"",
+    "test": "yarn workspaces run test --ci"
+  },
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

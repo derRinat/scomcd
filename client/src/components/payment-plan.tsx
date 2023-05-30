@@ -18,7 +18,7 @@ export const PaymentPlan: FC<{ data: CalcData }> = ({ data }) => {
       <Typography variant="h4" fontWeight={700} mb={3}>
         Tilgungsplan
       </Typography>
-      <Box mt={1} mb={5}>
+      <Box mt={1} mb={5} data-testid="payment-totals">
         <Box display="flex">
           <Typography fontWeight={700}>Gesamtzahlung:</Typography>
           <Typography ml={1}>{currency(data.totals.totalPayment)}</Typography>
@@ -37,7 +37,11 @@ export const PaymentPlan: FC<{ data: CalcData }> = ({ data }) => {
         </Box>
       </Box>
 
-      <TableContainer component={Paper} sx={{ minWidth: 320 }}>
+      <TableContainer
+        component={Paper}
+        sx={{ minWidth: 320 }}
+        data-testid="payment-plan"
+      >
         <Table size="small">
           <TableHead>
             <TableRow>
